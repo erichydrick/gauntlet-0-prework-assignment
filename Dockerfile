@@ -4,9 +4,10 @@ WORKDIR /app
 
 # Install Jupyter
 RUN pip install --no-cache-dir jupyter
+RUN pip install --no-cache-dir torch
 
 # Copy notebook files
-COPY . .
+ADD . .
 
 # Expose Jupyter port
 EXPOSE 8888
